@@ -1,0 +1,69 @@
+﻿
+@model TowIntNumbersModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Index</title>
+    </head>
+    <body>
+        @using (Html.BeginForm("SumResult", "Calculate", FormMethod.Post))
+        {
+            <fieldset>
+                <legend><span class="number"></span>1.Task</legend>
+                <span>Sum two integer number (Int64).</span>
+            </fieldset>
+            <table cellpadding="2" cellspacing="0" border="0">
+                <tr>
+                    <td>
+                        <label asp-for="FirstNumber" class="control-label">First number</label>
+                        <input asp-for="FirstNumber" class="form-control" />
+                        <span asp-validation-for="FirstNumber" class="text-danger"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label asp-for="SecondNumber" class="control-label">Second number</label>
+                        <input asp-for="SecondNumber" class="form-control" />
+                        <span asp-validation-for="SecondNumber" class="text-danger"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Submit" /></td>
+                </tr>
+            </table>
+        }
+
+        @using (Html.BeginForm("CalculateResult", "Calculate", FormMethod.Post))
+        {
+            <fieldset>
+                <legend><span class="number"></span>2.Task</legend>
+                <span>All possibilities to put + or - or nothing between the numbers 1, 2, ..., N (in this order) such that the result is always S. For example if N=9 and S=100 => 1 + 2 + 34 – 5 + 67 – 8 + 9 = 100.</span>
+                <span>Please enter "N" and "Sum" for calculation of all possible combinataion. N must be in a interval [1, 9] and Sum must be in [-100, 100].</span>
+            </fieldset>
+            <table cellpadding="2" cellspacing="0" border="0">
+                <tr>
+                    <td>
+                        <label asp-for="FirstNumber" class="control-label">N</label>
+                        <input asp-for="FirstNumber" class="form-control" />
+                        <span asp-validation-for="FirstNumber" class="text-danger"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label asp-for="SecondNumber" class="control-label">Sum</label>
+                        <input asp-for="SecondNumber" class="form-control" />
+                        <span asp-validation-for="SecondNumber" class="text-danger"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Submit" /></td>
+                </tr>
+            </table>
+        }
+    </body>
+</html>

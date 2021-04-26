@@ -1,0 +1,24 @@
+﻿@model IEnumerable<string>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <a class="btn btn-primary" href="@Url.Action("Index","Home")">Back</a>
+
+    <h4>Result</h4>
+    <hr />
+    <table cellpadding="0" cellspacing="0">
+        <tr>
+            <th>Results</th>
+        </tr>
+        @foreach (string result in Model)
+        {
+            <tr>
+                <td>@result</td>
+            </tr>
+        }
+    </table>
+
+</div>

@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Calculate.Api.Client">
+      <HintPath>..\..\..\Client\Calculate.Api.Client\bin\Debug\netcoreapp3.1\Calculate.Api.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Calculate.API.DTO">
+      <HintPath>..\..\..\DTO\Calculate.API.DTO\bin\Debug\netcoreapp3.1\Calculate.API.DTO.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
